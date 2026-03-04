@@ -17,7 +17,7 @@ if firebase_key:
     cred_dict = json.loads(firebase_key)
     cred = credentials.Certificate(cred_dict)
 else:
-    # Local testing (only if you have local json file)
+    # Local development only
     cred = credentials.Certificate("firebase-key.json")
 
 # Prevent re-initialization error
@@ -70,8 +70,6 @@ def save(note_name):
 
 
 # ----------------------------
-# RUN APP
+# IMPORTANT:
+# DO NOT use app.run() when using gunicorn
 # ----------------------------
-
-if __name__ == "__main__":
-    app.run(debug=True)
