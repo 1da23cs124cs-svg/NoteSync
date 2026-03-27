@@ -10,10 +10,20 @@
     <h1>NoteSync</h1>
     <p class="tagline">Secure Anonymous Editor</p>
 
-    <form method="POST" action="/open">
-        <input type="text" name="note_name" placeholder="Enter File Name" required>
-        <button type="submit">Access</button>
-    </form>
+
+    <form action="/open" method="POST">
+    <input type="text" name="note_name" placeholder="Enter note name" required>
+    
+    <input type="password" name="password" placeholder="Enter password" required>
+    
+    <button type="submit">Open Note</button>
+</form>
+
+<!-- Show message -->
+<p style="color:red;">
+    {{ message }}
+</p>
+
 </div>
 
 </body>
