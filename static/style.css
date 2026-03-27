@@ -1,3 +1,6 @@
+/* ============================
+   GLOBAL
+============================ */
 body {
     margin: 0;
     font-family: 'Courier New', monospace;
@@ -5,8 +8,10 @@ body {
     color: #00ffcc;
 }
 
-/* LOGIN PAGE */
 
+/* ============================
+   LOGIN PAGE
+============================ */
 .login-body {
     display: flex;
     justify-content: center;
@@ -31,6 +36,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Input fields */
 input {
     width: 250px;
     padding: 10px;
@@ -41,6 +47,7 @@ input {
     margin-bottom: 15px;
 }
 
+/* Login button */
 button {
     width: 100%;
     padding: 10px;
@@ -51,12 +58,17 @@ button {
     cursor: pointer;
 }
 
+/* Hover */
 button:hover {
     background: #00ccaa;
 }
 
-/* EDITOR PAGE */
 
+/* ============================
+   EDITOR PAGE
+============================ */
+
+/* Top bar */
 .top-bar {
     background: #111;
     padding: 15px;
@@ -65,14 +77,88 @@ button:hover {
     border-bottom: 1px solid #00ffcc33;
 }
 
+/* OLD textarea (keep if needed, else remove later) */
 textarea {
     width: 100%;
     height: calc(100vh - 60px);
     background: #0d0d0d;
-    color: #00ffcc;
+    color: #f1f7f6;
     border: none;
     outline: none;
     padding: 20px;
     font-size: 16px;
     resize: none;
+}
+
+
+/* ============================
+   TOOLBAR
+============================ */
+.toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #a0e6e9; /* your original light theme */
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+/* Button grouping */
+.group {
+    display: flex;
+    gap: 5px;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+}
+
+.group:last-child {
+    border-right: none;
+}
+
+
+/* ============================
+   TOOLBAR BUTTONS
+============================ */
+
+/* Default button style (final applied one) */
+.toolbar button {
+    background: rgb(153, 215, 219); /* your chosen color */
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Hover */
+.toolbar button:hover {
+    background: #e0e0e0;
+}
+
+/* Click (temporary press effect) */
+.toolbar button:active {
+    background: #c8c8c8;
+}
+
+/* Active (selected formatting state) */
+.toolbar button.active {
+    background: #d0d0d0;
+    border: 1px solid #888;
+}
+
+
+/* ============================
+   EDITOR AREA
+============================ */
+#editor {
+    min-height: 400px;
+    padding: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+
+span[contenteditable="false"] {
+    user-select: none;      /* can't select */
+    pointer-events: none;   /* can't click */
 }
