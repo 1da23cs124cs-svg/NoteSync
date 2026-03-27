@@ -97,11 +97,11 @@ function addTable() {
         let table = "<table border='1' style='border-collapse:collapse; width:100%; margin-top:10px;'>";
 
         for (let i = 0; i < rows; i++) {
-            tableHTML += "<tr>";
+            table += "<tr>";
             for (let j = 0; j < cols; j++) {
-                tableHTML += "<td style='padding:5px; color:gray;' contenteditable='true'>Cell</td>";
+                table += "<td style='padding:5px;'>Cell</td>";
             }
-            tableHTML += "</tr>";
+            table += "</tr>";
         }
 
         table += "</table>";
